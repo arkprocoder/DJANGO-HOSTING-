@@ -1,0 +1,94 @@
+https://myaccount.google.com/lesssecureapps
+
+
+HEROKU HOSTING
+
+1.pip install gunicorn
+
+2.pip install pipenv
+
+download heroku of your campatible version :
+
+https://devcenter.heroku.com/articles/heroku-cli
+
+3.heroku login
+
+4 virtualenv .
+
+5 .\Scripts\activate
+
+#output: (codingthunder) E:\codingthunder>
+
+6 cd project
+
+#ouput: (codingthunder) E:\codingthunder\project>
+
+7. pip install Django==3.0.5
+
+8. pip install requests==2.22.0
+
+9. pip freeze
+
+10. pip install gunicorn
+
+11. pip install django_heroku
+
+12. pip freeze > requirements.txt
+
+13 heroku create "yourdomainname"
+
+14 create Procfile without any extension
+
+ADD THIS WITH PROJECT NAME
+
+web: gunicorn project.wsgi
+
+15 GO TO SETTING.PY FILE IN PROJECT ADD THIS TWO LINES
+
+import django_heroku
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
+
+
+#after hosting u should run only this commands
+
+16. git init
+
+17. git status
+
+18. git add --all
+
+19. git commit -m "inital commit"
+
+20. heroku git:remote -a "creative-hands"
+
+21. git push heroku master
+
+
+
+
+22. heroku run bash
+
+23. python manage.py makemigrations
+
+24. python manage.py migrate
+
+24. python manage.py createsuperuser
+
+#if u do any chnages again
+
+open folder in command prompt
+
+
+25 .\Scripts\activate
+
+26. cd project
+
+27 git status
+
+28. git add --all
+
+29. git commit -m "final commit"
+
+30 git push heroku master 
